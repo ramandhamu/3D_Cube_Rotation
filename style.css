@@ -1,0 +1,84 @@
+body {
+	background: black;
+}
+
+@keyframes cube-rotation {
+	0% {
+		transform: rotateX(25deg) rotateY(-25deg) rotate(0deg) translateX(0px);
+	}
+
+	33%% {
+		transform: rotateX(-115deg) rotateY(-115deg) rotate(45deg) translateX(50px);
+	}
+
+	66%% {
+		transform: rotateX(-205deg) rotateY(-205deg) rotate(90deg) translateX(100px) translateY(50px);
+	}
+
+	100% {
+		transform: rotateX(-295deg) rotateY(-295deg) rotateZ(135deg) translateX(-100px) translateY(-50px);
+	}
+
+}
+
+
+
+
+
+.cube {
+	height: 200px;
+	width: 200px;
+	position: relative;
+	margin: 100px;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	transition: all 4s;
+	transform: rotateX(25deg) rotateY(-25deg);
+	animation: cube-rotation 2s ease-in-out infinite alternate;
+}
+
+
+
+
+.face {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+	border: 5px solid white;
+}
+
+.one {
+	background: skyblue;
+}
+
+.two {
+	background: orange;
+	transform: rotateY(90deg) translateX(100px) translateZ(-100px);
+}
+
+.three {
+	background: red;
+	transform: rotateY(90deg) translateZ(100px) translateX(100px);
+}
+
+.four {
+	background: turquoise;
+	transform: rotateX(90deg) translateZ(-100px) translateY(-100px);
+}
+
+.five {
+	background: deepskyblue;
+	transform: rotateX(90deg) translateZ(100px) translateY(-100px);
+}
+
+.six {
+	background: grey;
+	transform: translateZ(-200px);
+}
+
+.six:hover {
+	transform: translateZ(-200px);
+}
